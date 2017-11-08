@@ -13,6 +13,7 @@
 		5F19BD7F1F8C834E004415AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD7D1F8C834E004415AD /* Main.storyboard */; };
 		5F19BD811F8C834E004415AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD801F8C834E004415AD /* Assets.xcassets */; };
 		5F19BD841F8C834E004415AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD821F8C834E004415AD /* LaunchScreen.storyboard */; };
+		5FAE24511FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5F19BD801F8C834E004415AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F19BD831F8C834E004415AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F19BD851F8C834E004415AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrippitySplit.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		5F19BD6B1F8C834E004415AD = {
 			isa = PBXGroup;
 			children = (
+				5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */,
 				5F19BD761F8C834E004415AD /* TrippitySplit */,
 				5F19BD751F8C834E004415AD /* Products */,
 			);
@@ -142,6 +145,7 @@
 				5F19BD7C1F8C834E004415AD /* SecondViewController.swift in Sources */,
 				5F19BD781F8C834E004415AD /* AppDelegate.swift in Sources */,
 				5F19BD7A1F8C834E004415AD /* FirstViewController.swift in Sources */,
+				5FAE24511FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +307,22 @@
 				5F19BD8A1F8C834E004415AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */,
+			);
+			currentVersion = 5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */;
+			path = TrippitySplit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5F19BD6C1F8C834E004415AD /* Project object */;
 }
