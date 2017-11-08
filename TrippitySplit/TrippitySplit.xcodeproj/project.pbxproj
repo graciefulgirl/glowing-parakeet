@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F19BD781F8C834E004415AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19BD771F8C834E004415AD /* AppDelegate.swift */; };
-		5F19BD7A1F8C834E004415AD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19BD791F8C834E004415AD /* FirstViewController.swift */; };
-		5F19BD7C1F8C834E004415AD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19BD7B1F8C834E004415AD /* SecondViewController.swift */; };
 		5F19BD7F1F8C834E004415AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD7D1F8C834E004415AD /* Main.storyboard */; };
 		5F19BD811F8C834E004415AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD801F8C834E004415AD /* Assets.xcassets */; };
 		5F19BD841F8C834E004415AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD821F8C834E004415AD /* LaunchScreen.storyboard */; };
@@ -19,8 +17,6 @@
 /* Begin PBXFileReference section */
 		5F19BD741F8C834E004415AD /* TrippitySplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrippitySplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F19BD771F8C834E004415AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F19BD791F8C834E004415AD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5F19BD7B1F8C834E004415AD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5F19BD7E1F8C834E004415AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F19BD801F8C834E004415AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F19BD831F8C834E004415AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				5F19BD771F8C834E004415AD /* AppDelegate.swift */,
-				5F19BD791F8C834E004415AD /* FirstViewController.swift */,
-				5F19BD7B1F8C834E004415AD /* SecondViewController.swift */,
 				5F19BD7D1F8C834E004415AD /* Main.storyboard */,
 				5F19BD801F8C834E004415AD /* Assets.xcassets */,
 				5F19BD821F8C834E004415AD /* LaunchScreen.storyboard */,
@@ -142,9 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F19BD7C1F8C834E004415AD /* SecondViewController.swift in Sources */,
 				5F19BD781F8C834E004415AD /* AppDelegate.swift in Sources */,
-				5F19BD7A1F8C834E004415AD /* FirstViewController.swift in Sources */,
 				5FAE24511FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
