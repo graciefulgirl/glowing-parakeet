@@ -57,12 +57,14 @@ class ExpensesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseCell", for: indexPath) as! ExpenseCell
         let expense = expenses[indexPath.row]
         
         if let name = expense.name {
-            cell.textLabel?.text = name
+            cell.expenseNameLabel?.text = name
         }
+        cell.expenseAmountLabel.text = "\(expense.amount)"
+
         return cell
     }
     
@@ -95,4 +97,10 @@ class ExpensesTableViewController: UITableViewController {
         }    
     }
 
+}
+
+class ExpenseCell: UITableViewCell {
+    @IBOutlet weak var expenseNameLabel: UILabel!
+    @IBOutlet weak var expenseAmountLabel: UILabel!
+    
 }

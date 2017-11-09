@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BDK-Nl-94M">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" id="BDK-Nl-94M" customClass="ExpenseCell" customModule="TrippitySplit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BDK-Nl-94M" id="Q4U-ey-Rhd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCa-DZ-oxY">
+                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glE-zo-mf9">
+                                            <rect key="frame" x="325" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="glE-zo-mf9" secondAttribute="trailing" id="1CT-ff-ySO"/>
+                                        <constraint firstItem="glE-zo-mf9" firstAttribute="centerY" secondItem="Q4U-ey-Rhd" secondAttribute="centerY" id="6xr-6y-Hc7"/>
+                                        <constraint firstItem="MCa-DZ-oxY" firstAttribute="leading" secondItem="Q4U-ey-Rhd" secondAttribute="leadingMargin" id="j2b-UN-bha"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="MCa-DZ-oxY" firstAttribute="centerY" secondItem="BDK-Nl-94M" secondAttribute="centerY" id="iiH-9N-azh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="expenseAmountLabel" destination="glE-zo-mf9" id="SQW-3f-syQ"/>
+                                    <outlet property="expenseNameLabel" destination="MCa-DZ-oxY" id="JaB-bb-6zA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,11 +83,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2u-M0-tYO">
-                                <rect key="frame" x="137.5" y="164" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="DbE-m9-pWf"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expense Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2u-M0-tYO">
+                                <rect key="frame" x="129" y="164" width="117.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -72,16 +96,25 @@
                                     <action selector="addExpenseButtonTapped:" destination="KMj-dF-cJn" eventType="touchUpInside" id="Oct-zM-nec"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwB-3z-tKL">
+                                <rect key="frame" x="152" y="202" width="71.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SwB-3z-tKL" firstAttribute="centerX" secondItem="a2u-M0-tYO" secondAttribute="centerX" id="2hh-JU-1zI"/>
+                            <constraint firstItem="xbb-PY-x8L" firstAttribute="top" secondItem="SwB-3z-tKL" secondAttribute="bottom" constant="2" id="HnU-nN-WTm"/>
+                            <constraint firstItem="SwB-3z-tKL" firstAttribute="top" secondItem="a2u-M0-tYO" secondAttribute="bottom" constant="8" id="Pjv-sj-JZL"/>
                             <constraint firstItem="a2u-M0-tYO" firstAttribute="top" secondItem="HI0-tQ-ccw" secondAttribute="bottom" constant="100" id="UsI-n3-hii"/>
                             <constraint firstItem="a2u-M0-tYO" firstAttribute="centerX" secondItem="PZ4-rX-FzU" secondAttribute="centerX" id="XeL-oU-PtZ"/>
                             <constraint firstItem="xbb-PY-x8L" firstAttribute="centerX" secondItem="a2u-M0-tYO" secondAttribute="centerX" id="aXf-OH-Zla"/>
-                            <constraint firstItem="xbb-PY-x8L" firstAttribute="top" secondItem="a2u-M0-tYO" secondAttribute="bottom" constant="40" id="dqc-hW-6BE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="expenseAmountTextField" destination="SwB-3z-tKL" id="Pjb-oY-eDs"/>
                         <outlet property="expenseNameTextField" destination="a2u-M0-tYO" id="PeL-Us-yDr"/>
                     </connections>
                 </viewController>

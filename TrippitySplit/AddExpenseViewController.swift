@@ -11,6 +11,8 @@ import UIKit
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var expenseNameTextField: UITextField!
 
+    @IBOutlet weak var expenseAmountTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +28,10 @@ class AddExpenseViewController: UIViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let expense = Expense(context: context) // Link Expense & Context
         expense.name = expenseNameTextField.text!
+        if !(expenseAmountTextField.text?.isEmpty)! {
+            expense.amount = Double(expenseAmountTextField.text!)!
+
+        }
         
         // Save the data to coredata
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
