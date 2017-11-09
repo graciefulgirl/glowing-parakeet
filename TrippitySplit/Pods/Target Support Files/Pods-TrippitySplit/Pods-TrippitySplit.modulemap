@@ -1,0 +1,6 @@
+framework module Pods_TrippitySplit {
+  umbrella header "Pods-TrippitySplit-umbrella.h"
+
+  export *
+  module * { export * }
+}

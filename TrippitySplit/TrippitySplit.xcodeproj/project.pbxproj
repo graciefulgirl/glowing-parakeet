@@ -14,9 +14,12 @@
 		5FAE24511FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */; };
 		5FAE24531FB3CB1700CA34AF /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE24521FB3CB1700CA34AF /* AddExpenseViewController.swift */; };
 		5FAE24551FB3D19D00CA34AF /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE24541FB3D19D00CA34AF /* ExpensesTableViewController.swift */; };
+		A1FF1FD17E10E1FE8C7D2BA7 /* Pods_TrippitySplit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393F711D83F4BA3E36A0CF8D /* Pods_TrippitySplit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		393F711D83F4BA3E36A0CF8D /* Pods_TrippitySplit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrippitySplit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5253F162520F72022F9694CA /* Pods-TrippitySplit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrippitySplit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrippitySplit/Pods-TrippitySplit.release.xcconfig"; sourceTree = "<group>"; };
 		5F19BD741F8C834E004415AD /* TrippitySplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrippitySplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F19BD771F8C834E004415AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F19BD7E1F8C834E004415AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrippitySplit.xcdatamodel; sourceTree = "<group>"; };
 		5FAE24521FB3CB1700CA34AF /* AddExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddExpenseViewController.swift; path = ../AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5FAE24541FB3D19D00CA34AF /* ExpensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewController.swift; sourceTree = "<group>"; };
+		B19603D8938EA7A66C4E1D0C /* Pods-TrippitySplit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrippitySplit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrippitySplit/Pods-TrippitySplit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,18 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FF1FD17E10E1FE8C7D2BA7 /* Pods_TrippitySplit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F9BFAF84D3BFEA2D095E701 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B19603D8938EA7A66C4E1D0C /* Pods-TrippitySplit.debug.xcconfig */,
+				5253F162520F72022F9694CA /* Pods-TrippitySplit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5F19BD6B1F8C834E004415AD = {
 			isa = PBXGroup;
 			children = (
 				5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */,
 				5F19BD761F8C834E004415AD /* TrippitySplit */,
 				5F19BD751F8C834E004415AD /* Products */,
+				1F9BFAF84D3BFEA2D095E701 /* Pods */,
+				E1BCA3B08423A0CD70EF7F31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +86,14 @@
 			path = TrippitySplit;
 			sourceTree = "<group>";
 		};
+		E1BCA3B08423A0CD70EF7F31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				393F711D83F4BA3E36A0CF8D /* Pods_TrippitySplit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F19BD881F8C834E004415AD /* Build configuration list for PBXNativeTarget "TrippitySplit" */;
 			buildPhases = (
+				880764B7FD0D56717E41B8B1 /* [CP] Check Pods Manifest.lock */,
 				5F19BD701F8C834E004415AD /* Sources */,
 				5F19BD711F8C834E004415AD /* Frameworks */,
 				5F19BD721F8C834E004415AD /* Resources */,
+				C6849140D0D8778D256DD430 /* [CP] Embed Pods Frameworks */,
+				50E4783F4362CF044421DD89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50E4783F4362CF044421DD89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrippitySplit/Pods-TrippitySplit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		880764B7FD0D56717E41B8B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrippitySplit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6849140D0D8778D256DD430 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrippitySplit/Pods-TrippitySplit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F19BD701F8C834E004415AD /* Sources */ = {
@@ -266,6 +344,7 @@
 		};
 		5F19BD891F8C834E004415AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19603D8938EA7A66C4E1D0C /* Pods-TrippitySplit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TrippitySplit/Info.plist;
@@ -278,6 +357,7 @@
 		};
 		5F19BD8A1F8C834E004415AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5253F162520F72022F9694CA /* Pods-TrippitySplit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TrippitySplit/Info.plist;
