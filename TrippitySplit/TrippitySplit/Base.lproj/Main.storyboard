@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Expenses Table View Controller-->
         <scene sceneID="QJg-GE-MjW">
             <objects>
-                <tableViewController id="W8P-DR-WbW" sceneMemberID="viewController">
+                <tableViewController id="W8P-DR-WbW" customClass="ExpensesTableViewController" customModule="TrippitySplit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9AA-up-o5J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1580" y="266.71664167916043"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Expense View Controller-->
         <scene sceneID="9OA-iw-yoo">
             <objects>
-                <viewController id="KMj-dF-cJn" sceneMemberID="viewController">
+                <viewController id="KMj-dF-cJn" customClass="AddExpenseViewController" customModule="TrippitySplit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HI0-tQ-ccw"/>
                         <viewControllerLayoutGuide type="bottom" id="Zt6-rC-7x6"/>
@@ -68,6 +68,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-PY-x8L">
                                 <rect key="frame" x="142.5" y="234" width="90" height="30"/>
                                 <state key="normal" title="Add Expense"/>
+                                <connections>
+                                    <action selector="addExpenseButtonTapped:" destination="KMj-dF-cJn" eventType="touchUpInside" id="Oct-zM-nec"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,6 +81,9 @@
                             <constraint firstItem="xbb-PY-x8L" firstAttribute="top" secondItem="a2u-M0-tYO" secondAttribute="bottom" constant="40" id="dqc-hW-6BE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="expenseNameTextField" destination="a2u-M0-tYO" id="PeL-Us-yDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52P-Z5-P1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
