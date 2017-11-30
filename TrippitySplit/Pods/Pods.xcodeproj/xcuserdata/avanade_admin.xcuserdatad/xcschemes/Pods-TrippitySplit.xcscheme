@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CCF13B387790AA43CB5691EE941D521"
+               BlueprintIdentifier = "39067A3B80259366EB71652A02F7ED33"
                BuildableName = "Pods_TrippitySplit.framework"
                BlueprintName = "Pods-TrippitySplit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4CCF13B387790AA43CB5691EE941D521"
+            BlueprintIdentifier = "39067A3B80259366EB71652A02F7ED33"
             BuildableName = "Pods_TrippitySplit.framework"
             BlueprintName = "Pods-TrippitySplit"
             ReferencedContainer = "container:Pods.xcodeproj">

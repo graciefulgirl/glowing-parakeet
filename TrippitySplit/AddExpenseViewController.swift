@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSDynamoDB
+import AWSAuthCore
 
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var expenseNameTextField: UITextField!
@@ -25,17 +27,46 @@ class AddExpenseViewController: UIViewController {
     }
     
     @IBAction func addExpenseButtonTapped(_ sender: UIButton) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let expense = Expense(context: context) // Link Expense & Context
-        expense.name = expenseNameTextField.text!
-        if !(expenseAmountTextField.text?.isEmpty)! {
-            expense.amount = Double(expenseAmountTextField.text!)!
+        let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
+        
+        // Create data object using data models you downloaded from Mobile Hub
+        let expenseItem: Expense = Expense()
+        
+        
+        if let expense = expenseAmountTextField.text,
+            !expense.isEmpty {
+            //        expenseItem._userId = AWSIdentityManager.default().identityId
+            expenseItem._name = expense
+            
+            if !(expenseAmountTextField.text?.isEmpty)! {
+                expenseItem._amount = Double(expenseAmountTextField.text!)! as NSNumber?
+            }
+            
+            expenseItem._date = "Today"
+            
+            //Save a new item
+            dynamoDbObjectMapper.save(expenseItem, completionHandler: {
+                (error: Error?) -> Void in
+                
+                if let error = error {
+                    print("Amazon DynamoDB Save Error: \(error)")
+                    return
+                }
+                print("An item was saved.")
+            })
 
         }
-        
-        // Save the data to coredata
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
+//        
+//        
+//        expense.name = expenseNameTextField.text!
+//        if !(expenseAmountTextField.text?.isEmpty)! {
+//            expense.amount = Double(expenseAmountTextField.text!)!
+//
+//        }
+//        
+//        // Save the data to coredata
+//        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//        
         let _ = navigationController?.popViewController(animated: true)
     }
 

@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AWSAuthCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AWSCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AWSDynamoDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AWSMobileClient.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TrippitySplit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4CCF13B387790AA43CB5691EE941D521</key>
+		<key>1646CBD253AEDE4D9D17CE05B758F781</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>39067A3B80259366EB71652A02F7ED33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5FBBF392C411E7B83F897400683BAA73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6AC741B8F56A6C5819D0D45F3DFD5D4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>764BF5F8A7793010994AF3D12E8FB7BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

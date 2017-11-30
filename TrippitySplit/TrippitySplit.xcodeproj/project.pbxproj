@@ -11,7 +11,9 @@
 		5F19BD7F1F8C834E004415AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD7D1F8C834E004415AD /* Main.storyboard */; };
 		5F19BD811F8C834E004415AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD801F8C834E004415AD /* Assets.xcassets */; };
 		5F19BD841F8C834E004415AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F19BD821F8C834E004415AD /* LaunchScreen.storyboard */; };
-		5FAE24511FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */; };
+		5F2CBEDD1FCF65BD00268937 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CBEDB1FCF65BD00268937 /* Expense.swift */; };
+		5F2CBEDE1FCF65BD00268937 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5F2CBEDC1FCF65BD00268937 /* LICENSE.txt */; };
+		5F2CBEE01FCF65F500268937 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F2CBEDF1FCF65F500268937 /* awsconfiguration.json */; };
 		5FAE24531FB3CB1700CA34AF /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE24521FB3CB1700CA34AF /* AddExpenseViewController.swift */; };
 		5FAE24551FB3D19D00CA34AF /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE24541FB3D19D00CA34AF /* ExpensesTableViewController.swift */; };
 		A1FF1FD17E10E1FE8C7D2BA7 /* Pods_TrippitySplit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393F711D83F4BA3E36A0CF8D /* Pods_TrippitySplit.framework */; };
@@ -26,7 +28,9 @@
 		5F19BD801F8C834E004415AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F19BD831F8C834E004415AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F19BD851F8C834E004415AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrippitySplit.xcdatamodel; sourceTree = "<group>"; };
+		5F2CBEDB1FCF65BD00268937 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		5F2CBEDC1FCF65BD00268937 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		5F2CBEDF1FCF65F500268937 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		5FAE24521FB3CB1700CA34AF /* AddExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddExpenseViewController.swift; path = ../AddExpenseViewController.swift; sourceTree = "<group>"; };
 		5FAE24541FB3D19D00CA34AF /* ExpensesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewController.swift; sourceTree = "<group>"; };
 		B19603D8938EA7A66C4E1D0C /* Pods-TrippitySplit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrippitySplit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrippitySplit/Pods-TrippitySplit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,7 +60,6 @@
 		5F19BD6B1F8C834E004415AD = {
 			isa = PBXGroup;
 			children = (
-				5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */,
 				5F19BD761F8C834E004415AD /* TrippitySplit */,
 				5F19BD751F8C834E004415AD /* Products */,
 				1F9BFAF84D3BFEA2D095E701 /* Pods */,
@@ -75,6 +78,8 @@
 		5F19BD761F8C834E004415AD /* TrippitySplit */ = {
 			isa = PBXGroup;
 			children = (
+				5F2CBEDF1FCF65F500268937 /* awsconfiguration.json */,
+				5F2CBED71FCF65BD00268937 /* TrippitySplit-integration-lib-aws-my-sample-app-ios-swift (1) */,
 				5F19BD771F8C834E004415AD /* AppDelegate.swift */,
 				5F19BD7D1F8C834E004415AD /* Main.storyboard */,
 				5FAE24521FB3CB1700CA34AF /* AddExpenseViewController.swift */,
@@ -84,6 +89,39 @@
 				5FAE24541FB3D19D00CA34AF /* ExpensesTableViewController.swift */,
 			);
 			path = TrippitySplit;
+			sourceTree = "<group>";
+		};
+		5F2CBED71FCF65BD00268937 /* TrippitySplit-integration-lib-aws-my-sample-app-ios-swift (1) */ = {
+			isa = PBXGroup;
+			children = (
+				5F2CBED81FCF65BD00268937 /* AmazonAws */,
+				5F2CBEDC1FCF65BD00268937 /* LICENSE.txt */,
+			);
+			path = "TrippitySplit-integration-lib-aws-my-sample-app-ios-swift (1)";
+			sourceTree = "<group>";
+		};
+		5F2CBED81FCF65BD00268937 /* AmazonAws */ = {
+			isa = PBXGroup;
+			children = (
+				5F2CBED91FCF65BD00268937 /* Models */,
+			);
+			path = AmazonAws;
+			sourceTree = "<group>";
+		};
+		5F2CBED91FCF65BD00268937 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F2CBEDA1FCF65BD00268937 /* NoSQL */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F2CBEDA1FCF65BD00268937 /* NoSQL */ = {
+			isa = PBXGroup;
+			children = (
+				5F2CBEDB1FCF65BD00268937 /* Expense.swift */,
+			);
+			path = NoSQL;
 			sourceTree = "<group>";
 		};
 		E1BCA3B08423A0CD70EF7F31 /* Frameworks */ = {
@@ -156,6 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2CBEE01FCF65F500268937 /* awsconfiguration.json in Resources */,
+				5F2CBEDE1FCF65BD00268937 /* LICENSE.txt in Resources */,
 				5F19BD841F8C834E004415AD /* LaunchScreen.storyboard in Resources */,
 				5F19BD811F8C834E004415AD /* Assets.xcassets in Resources */,
 				5F19BD7F1F8C834E004415AD /* Main.storyboard in Resources */,
@@ -204,9 +244,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrippitySplit/Pods-TrippitySplit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -223,7 +272,7 @@
 				5F19BD781F8C834E004415AD /* AppDelegate.swift in Sources */,
 				5FAE24531FB3CB1700CA34AF /* AddExpenseViewController.swift in Sources */,
 				5FAE24551FB3D19D00CA34AF /* ExpensesTableViewController.swift in Sources */,
-				5FAE24511FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld in Sources */,
+				5F2CBEDD1FCF65BD00268937 /* Expense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,19 +439,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5FAE244F1FB38C5C00CA34AF /* TrippitySplit.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */,
-			);
-			currentVersion = 5FAE24501FB38C5C00CA34AF /* TrippitySplit.xcdatamodel */;
-			path = TrippitySplit.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5F19BD6C1F8C834E004415AD /* Project object */;
 }

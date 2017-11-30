@@ -32,11 +32,11 @@ class ExpensesTableViewController: UITableViewController {
     }
     
     func getData() {
-        do {
-            expenses = try context.fetch(Expense.fetchRequest())
-        } catch {
-            print("Fetching Failed")
-        }
+//        do {
+//            expenses = try context.fetch(Expense.fetchRequest())
+//        } catch {
+//            print("Fetching Failed")
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,10 +60,10 @@ class ExpensesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseCell", for: indexPath) as! ExpenseCell
         let expense = expenses[indexPath.row]
         
-        if let name = expense.name {
+        if let name = expense._name {
             cell.expenseNameLabel?.text = name
         }
-        cell.expenseAmountLabel.text = "\(expense.amount)"
+        cell.expenseAmountLabel.text = "\(expense._amount)"
 
         return cell
     }
@@ -79,23 +79,23 @@ class ExpensesTableViewController: UITableViewController {
 
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let expense = expenses[indexPath.row]
-            context.delete(expense)
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
-            do {
-                expenses = try context.fetch(Expense.fetchRequest())
-            } catch {
-                print("Fetch Failed")
-            }
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            let expense = expenses[indexPath.row]
+//            context.delete(expense)
+//            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//            
+//            do {
+//                expenses = try context.fetch(Expense.fetchRequest())
+//            } catch {
+//                print("Fetch Failed")
+//            }
+//            // Delete the row from the data source
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        } else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }    
+//    }
 
 }
 
